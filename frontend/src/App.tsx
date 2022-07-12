@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import NotificationButon from "./assets/components/notification-buton"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
+   <>
     <h1>hello world</h1>
+    <NotificationButon></NotificationButon>   
+   </>
   )
 }
 
