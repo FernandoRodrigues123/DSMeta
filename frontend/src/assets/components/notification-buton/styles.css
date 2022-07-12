@@ -1,0 +1,9 @@
+.dsmeta-botao-notificar img{
+    width: 19px;
+}
+
+.dsmeta-botao-notificar-conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

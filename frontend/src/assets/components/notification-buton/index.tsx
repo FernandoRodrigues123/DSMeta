@@ -1,4 +1,5 @@
 import icon from '../../img/notificacao-botao.svg'
+import './styles.css'
 
 function NotificationButon() {
     return (
