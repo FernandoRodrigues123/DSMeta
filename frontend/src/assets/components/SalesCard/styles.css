@@ -82,6 +82,7 @@ h2 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin: auto;
 
 }
 
@@ -125,3 +126,4 @@ h2 {
         display: table-cell;
     }
 }
+
