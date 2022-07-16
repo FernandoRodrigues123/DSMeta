@@ -22,7 +22,7 @@ const max = new Date();
         const dmin = minDate.toISOString().slice(0,10);
         const dmax = maxDate.toISOString().slice(0,10);
 
-        console.log(dmin)
+        
 
         axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`).then(response => {
            setSales(response.data.content)
@@ -76,7 +76,7 @@ const max = new Date();
                             <td className="show992">{sale.deals}</td>
                             <td>{sale.amount}</td>
                             <td>
-                                <NotificationButon />
+                                <NotificationButon saleId={sale.id} />
                             </td>
                         </tr>
                                 )
