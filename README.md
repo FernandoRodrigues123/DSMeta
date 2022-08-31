@@ -7,3 +7,4 @@ Projeto feito na semana spring react do canal devsuperior, utilizando spring boo
 para desenvolver uma aplicação completa, que gerencia vendedores podendo filtrar por data
 e notificar via sms
 
+https://lnkd.in/dkpmS9xy
