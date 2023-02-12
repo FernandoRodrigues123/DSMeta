@@ -26,7 +26,6 @@ public class SaleController {
 	private SMSService smsservice;
 
 	@GetMapping
-	@CrossOrigin(origins ="https://dsmeta-fernando.netlify.app")
 	public Page<Sale> findSales(@RequestParam(value = "minDate", defaultValue = "") String minDate,
 			@RequestParam(value = "maxDate", defaultValue = "") String maxDate, Pageable pageable) {
 		
@@ -34,7 +33,6 @@ public class SaleController {
 	} 
 
 	@GetMapping("/{id}/notification")
-	@CrossOrigin("https://dsmeta-fernando.netlify.app")
 	public void notifySms(@PathVariable Long id) {
 		smsservice.sendSms(id);
 	}
