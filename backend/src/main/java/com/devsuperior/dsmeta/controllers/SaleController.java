@@ -1,8 +1,5 @@
 package com.devsuperior.dsmeta.controllers;
 
-
-import javax.websocket.server.PathParam;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -20,22 +17,23 @@ import com.devsuperior.dsmeta.services.SaleServices;
 @RequestMapping(value = "/sales")
 public class SaleController {
 
-	@Autowired
-	private SaleServices services;
 
-	@Autowired
-	private SMSService smsservice;
+	@Autowired(required = true)
+	private SaleServices services;
 	
+	@Autowired(required = true)
+	private SMSService smsservice;
+
 	@GetMapping
 	public Page<Sale> findSales(@RequestParam(value = "minDate", defaultValue = "") String minDate,
-								@RequestParam(value = "maxDate", defaultValue = "")	String maxDate,
-								Pageable pageable) {
+			@RequestParam(value = "maxDate", defaultValue = "") String maxDate, Pageable pageable) {
+		
 		return services.findSales(minDate, maxDate, pageable);
-	}
-	
+	} 
+
 	@GetMapping("/{id}/notification")
-	public void notifySms(@PathVariable Long id){
+	public void notifySms(@PathVariable Long id) {
 		smsservice.sendSms(id);
 	}
-	
+
 }
